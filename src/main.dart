@@ -4,7 +4,8 @@ const List<int> defaultList = [3,4,5,6];
 main() {
 
   List<int> newList = [];
-  print(defaultList.toString()+'.indexOf(5); => ${[3,4,5,6].indexOf(5)}');
+  newList = cleanList();
+  print(defaultList.toString()+'.indexOf(5); => ${newList.indexOf(5)}');
    
   newList = cleanList();
   newList.add(7);
@@ -26,9 +27,8 @@ main() {
   newList.addAll([7,8]);
   print(defaultList.toString()+".addAll([7, 8]); => " + newList.toString());
   
-  newList = cleanList();
-  var map = newList.map((num)=>num+6);
-  print(defaultList.toString()+".map((num)=>num+6); => " + map.toString());
+  newList = cleanList();  
+  print(defaultList.toString()+".map((num)=>num+6); => " + newList.map((num)=>num+6).toString());
 
   newList = cleanList();
   newList.removeAt(0);
@@ -43,44 +43,35 @@ main() {
   print(defaultList.toString()+".removeRange(1, 3); => " + newList.toString());
 
   newList = cleanList();
-  int sum = newList.reduce((value, element) => value = value + element);
-  print(defaultList.toString()+".reduce((value, element) => value = value + element); => " + sum.toString());
+  print(defaultList.toString()+".reduce((value, element) => value = value + element); => " + 
+     newList.reduce((value, element) => value = value + element).toString());
  
   newList = cleanList();
-  var newList2 = newList.reversed;
-  print(defaultList.toString()+".reversed; => " + newList2.toString());
+  print(defaultList.toString()+".reversed; => " + newList.reversed.toString());
 
   newList = cleanList();
-  int item = newList.first;
-  print(defaultList.toString()+".first; => " + item.toString());
+  print(defaultList.toString()+".first; => " + newList.first.toString());
 
   newList = cleanList();
-  item = newList.last;
-  print(defaultList.toString()+".last; => " + item.toString());
+  print(defaultList.toString()+".last; => " + newList.last.toString());
 
   newList = cleanList();
-  bool isTrue = newList.any((element) => element >= 10); // false;
-  print(defaultList.toString()+".any((element) => element >= 10); => " + isTrue.toString());
+  print(defaultList.toString()+".any((element) => element >= 10); => " + newList.any((element) => element >= 10).toString());
 
   newList = cleanList();
-  var asMap = newList.asMap();
-  print(defaultList.toString()+".asMap(); => " + asMap.toString());
+  print(defaultList.toString()+".asMap(); => " + newList.asMap().toString());
 
   newList = cleanList();
-  isTrue = newList.contains(3);
-  print(defaultList.toString()+".contains(3); => " + isTrue.toString());
+  print(defaultList.toString()+".contains(3); => " + newList.contains(3).toString());
 
   newList = cleanList();
-  isTrue = newList.isNotEmpty;
-  print(defaultList.toString()+".isNotEmpty; => " + isTrue.toString());
+  print(defaultList.toString()+".isNotEmpty; => " + newList.isNotEmpty.toString());
 
   newList = cleanList();
-  isTrue = newList.isEmpty;
-  print(defaultList.toString()+".isEmpty; => " + isTrue.toString());
+  print(defaultList.toString()+".isEmpty; => " + newList.isEmpty.toString());
 
   newList = cleanList();
-  int size = newList.length;
-  print(defaultList.toString()+".lenght; => " + size.toString());
+  print(defaultList.toString()+".lenght; => " + newList.length.toString());
 
   newList = cleanList();
   newList.fillRange(1, 3, 9);
