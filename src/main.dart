@@ -85,6 +85,6 @@ main() {
 
 cleanList() {
   List<int>newList = [];
-  newList..addAll(defaultList);
+  newList.addAll(defaultList);
   return newList;
 }
